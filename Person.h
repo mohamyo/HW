@@ -1,7 +1,7 @@
 #include<string>
 class Person {
 
-private:
+protected:
 	long id;
 	char* name;
 	int age;
