@@ -13,5 +13,9 @@ public:
 	workingStudent(char*name, long id, int age, int average, char* institute, float sallary, bool same_institute) :student(name, id, age, average, institute), employee(name, id, age, sallary) {
 		this->same_institute = same_institute;
 	}
-	
+	virtual void print() {
+		employee::Print();
+		student::Print();
+		cout << "same_institute: " << same_institute << endl;
+	}
 };
