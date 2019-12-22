@@ -6,13 +6,17 @@ protected:
 	char* name;
 	int age;
 public:
-	Person(long id=0, char* name=nullptr, int age=0) {
-		this->id = id;
+	person(char* name = nullptr, long id = 0, int age = 0) {
 		this->name = new char[10];
-		strcpy(this->name, name);
+		strcpy_s(this->name, 10 + 1, name);
+		this->id = id;
 		this->age = age;
 	}
-
+virtual void Print() {
+		cout << "name: " << name << endl;
+		cout << "id: " << id << endl;
+		cout << "age: " << age << endl;
+	}
 
 
 };
